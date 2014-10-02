@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="juegoAppModel">
+
+  <head>
+    <title>¿Dondé está Carmen San Diego?</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <!-- Bootstrap -->
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <script src="js/bootstrap.min.js"></script>
+    <!-- Fin bootstrap -->
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    
+    <script type="text/javascript" src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">    
+
+  </head>
+
+  <body ng-controller="juegoCtrl as juego">
+    <!-- Inicio del nav bar -->
+    <dir class="container" ng-controller="TabController as tab">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li> <img id="navbarHeader" src="images/iconoCarmenSanDiego.png"></li>
+            <li ng-class="{ active: tab.isSet(1)}"><a href ng-click="tab.setTab(1)">Description</a></li>
+            <li ng-class="{ active: tab.isSet(2)}"><a href ng-click="tab.setTab(2)">Specs</a></li>
+            <li ng-class="{ active: tab.isSet(3)}"><a href ng-click="tab.setTab(3)">Reviews</a></li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+      <div ng-show="tab.isSet(1)">
+        <h4>Description</h4>
+        <blockquote>{{product.description}}</blockquote>
+      </div>
+      <div ng-show="tab.isSet(2)">
+        <h4>Specs</h4>
+        <blockquote>Shine:{{product.shine}}</blockquote>
+      </div>
+      <div ng-show="tab.isSet(3)">
+        <h4>Reviews</h4>
+        <blockquote></blockquote>
+      </div>
+
+      
+    </dir>
+    <!-- Fin del nav bar -->
+    
+    <!-- Inicio del Cuerpo -->     
+
+    <!-- Fin del Cuerpo -->
+    
+    <!-- Inicio del Footer -->
+    
+    <!-- Fin del Footer -->
+  </body>
+  
+  
+</html>
