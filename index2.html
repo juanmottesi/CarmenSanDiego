@@ -5,7 +5,7 @@
     <title>¿Dondé está Carmen San Diego?</title>
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+    <link rel="shortcut icon" href="images/iconoCarmenSanDiego.png" type="image/png" />
     <!-- Bootstrap -->
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
       <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
@@ -22,39 +22,37 @@
 
   <body ng-controller="juegoCtrl as juego">
     <!-- Inicio del nav bar -->
-    <dir class="container" ng-controller="TabController as tab">
+    <div class="container" ng-controller="TabController as tab">
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
           <ul class="nav navbar-nav">
             <li> <img id="navbarHeader" src="images/iconoCarmenSanDiego.png"></li>
-            <li ng-class="{ active: tab.isSet(1)}"><a href ng-click="tab.setTab(1)">Description</a></li>
-            <li ng-class="{ active: tab.isSet(2)}"><a href ng-click="tab.setTab(2)">Specs</a></li>
-            <li ng-class="{ active: tab.isSet(3)}"><a href ng-click="tab.setTab(3)">Reviews</a></li>
+            <li ng-class="{ active: tab.isSet(1)}"><a href ng-click="tab.setTab(1)">Informacion</a></li>
+            <li ng-class="{ active: tab.isSet(2)}"><a href ng-click="tab.setTab(2)">Orden de arresto</a></li>
+            <li ng-class="{ active: tab.isSet(3)}"><a href ng-click="tab.setTab(3)">Pistas</a></li>
           </ul>
         </div>
       </nav>
-      <br>
-      <br>
-      <br>
-      <div ng-show="tab.isSet(1)">
-        <h4>Description</h4>
-        <blockquote>{{product.description}}</blockquote>
-      </div>
-      <div ng-show="tab.isSet(2)">
-        <h4>Specs</h4>
-        <blockquote>Shine:{{product.shine}}</blockquote>
-      </div>
-      <div ng-show="tab.isSet(3)">
-        <h4>Reviews</h4>
-        <blockquote></blockquote>
-      </div>
-
+      <!-- Fin del nav bar -->
+      <!-- Inicio del Cuerpo -->
+      <div class="jumbotron">
       
-    </dir>
-    <!-- Fin del nav bar -->
+        <div ng-show="tab.isSet(1)" class="jumbotron">
+          <center><h2>Pais Actual: {{juego.paisActual()}}</h2></center>
+         
+        </div>
+        <div ng-show="tab.isSet(2)" class="jumbotron">
+          <center><h2>Orden de arresto: {{juego.ordenDeArresto}}</h2></center>
+          
+        </div>
+        <div ng-show="tab.isSet(3)" class="jumbotron">
+          <center><h2>Pistas</h2></center>
+         
+        </div>
+      </div>
+      
+    </div>
     
-    <!-- Inicio del Cuerpo -->     
-
     <!-- Fin del Cuerpo -->
     
     <!-- Inicio del Footer -->

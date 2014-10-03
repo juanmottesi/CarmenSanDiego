@@ -6,6 +6,10 @@
     this.ordenDeArresto = { }
     this.siguientePais = { }
     
+    this.paisActual = function(){
+      return this.detective.caso.ciudadActual.nombreDelPais;
+    };
+        
   });
 
  app.controller('TabController', function(){
@@ -22,14 +26,6 @@
 
 
 // Dummys "obj"?
-
-var detective = {
-  expedientes : expedientes,
-  mapamundi : mapamundi,
-  caso : caso       
-};
-
-var mapamundi = [arg, china, nigeria, brasil, mex, eu, espana, italia, alemania];
 
 var arg = {
   nombreDelPais : "Argentina",
@@ -169,6 +165,8 @@ espana.conexiones =   [arg, china, nigeria, brasil, mex, eu,         italia, ale
 italia.conexiones =   [arg, china, nigeria, brasil, mex, eu, espana,         alemania];
 alemania.conexiones = [arg, china, nigeria, brasil, mex, eu, espana, italia          ];
 
+var mapamundi = [arg, china, nigeria, brasil, mex, eu, espana, italia, alemania];
+  
 var expedientes = [{
   nombre : "El Pinguino",
   seniasParticulares : ["Alto","Pelado","Corpulento"],
@@ -197,6 +195,12 @@ var caso = {
   planDeEscape : planDeEscape,
   villano : expedientes[1],
   ciudadActual : planDeEscape[0]
+};
+  
+var detective = {
+  expedientes : expedientes,
+  mapamundi : mapamundi,
+  caso : caso       
 };
 
 
