@@ -47,7 +47,7 @@
         </div>
         <!-- Fin de lugares a donde ir -->
         <br>
-        <center><button type="button" class="btn btn-default" ng-click="juego.actualizarPaises()">Viajar a {{juego.getSiguientePais().nombreDelPais}}</button></center>
+        <center><button type="button" class="btn btn-default" ng-click="juego.actualizarPaises()" ng-hide="juego.getSiguientePais() === null">Viajar a {{juego.getSiguientePais().nombreDelPais}}</button></center>
         
         <h5>Paises ya Visitados: </h5>
         <div ng-repeat="paisesYV in juego.detective.caso.paisesVisitados">
@@ -67,7 +67,7 @@
           </div>
         </div>
         <br>
-        <center><button type="button" class="btn btn-default" ng-click="juego.setOrdenDeArresto(juego.getOrdenSinEmitir())">Generar orden para {{juego.getOrdenSinEmitir().nombre}}</button></center>
+        <center><button type="button" class="btn btn-default" ng-hide="juego.getOrdenSinEmitir() === null" ng-click="juego.setOrdenDeArresto(juego.getOrdenSinEmitir())">Generar orden para {{juego.getOrdenSinEmitir().nombre}}</button></center>
         
           
         </div>
