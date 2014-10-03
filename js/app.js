@@ -3,11 +3,53 @@
 
   app.controller('juegoCtrl', function() {
     this.detective = detective;
-    this.ordenDeArresto = { }
-    this.siguientePais = { }
+    this.ordenDeArresto = null
+    this.siguientePais = null
+    this.ordenSinEmitir = null
     
     this.paisActual = function(){
       return this.detective.caso.ciudadActual.nombreDelPais;
+    };
+    
+    this.setSiguientePais = function(newValue){
+      this.siguientePais = newValue;
+    };
+    
+    this.getSiguientePais = function(){
+      return this.siguientePais;
+    };
+    
+    this.isSetSiguientePais = function(value){
+      return this.siguientePais === value;
+    };
+    
+    this.actualizarPaises = function(){
+      this.detective.caso.ciudadActual = this.siguientePais
+      this.detective.caso.paisesVisitados += this.siguientePais
+    };
+    
+    this.setOrdenDeArresto = function(newValue){
+      this.ordenDeArresto = newValue;
+    };
+    
+    this.getOrdenDeArresto = function(){
+      return this.ordenDeArresto;
+    };
+    
+    this.isSetOrdenDeArresto = function(newValue){
+      this.ordenDeArresto === newValue;
+    };
+    
+    this.setOrdenSinEmitir = function(newValue){
+      this.ordenSinEmitir = newValue;
+    };
+    
+    this.getOrdenSinEmitir = function(){
+      return this.ordenSinEmitir;
+    };
+    
+    this.isSetOrdenSinEmitir = function(newValue){
+      return this.ordenSinEmitir === newValue;
     };
         
   });
@@ -194,7 +236,8 @@ var planDeEscape = [arg,nigeria,mex,espana,alemania];
 var caso = {
   planDeEscape : planDeEscape,
   villano : expedientes[1],
-  ciudadActual : planDeEscape[0]
+  ciudadActual : planDeEscape[0],
+  paisesVisitados : [planDeEscape[0]]
 };
   
 var detective = {

@@ -35,20 +35,70 @@
       </nav>
       <!-- Fin del nav bar -->
       <!-- Inicio del Cuerpo -->
-      <div class="jumbotron">
       
-        <div ng-show="tab.isSet(1)" class="jumbotron">
-          <center><h2>Pais Actual: {{juego.paisActual()}}</h2></center>
-         
+      <div ng-show="tab.isSet(1)" class="jumbotron">
+        <center><h2>Pais Actual: {{juego.paisActual()}}</h2></center>
+        <!-- Inicio de lugares a donde ir -->
+        <center><h3>Siguiente Pais:</h3></center>
+        <div class="list-group"  style="width: 45%; margin: 0 auto">
+           <div ng-repeat="paises in juego.detective.caso.ciudadActual.conexiones">
+             <a href ng-click="juego.setSiguientePais(paises)" ng-class="{ active: juego.isSetSiguientePais(paises)}" class="list-group-item">{{paises.nombreDelPais}}</a>
+           </div>
         </div>
-        <div ng-show="tab.isSet(2)" class="jumbotron">
-          <center><h2>Orden de arresto: {{juego.ordenDeArresto}}</h2></center>
+        <!-- Fin de lugares a donde ir -->
+        <br>
+        <center><button type="button" class="btn btn-default" ng-click="juego.actualizarPaises()">Viajar a {{juego.getSiguientePais().nombreDelPais}}</button></center>
+        
+        <h5>Paises ya Visitados: </h5>
+        <div ng-repeat="paisesYV in juego.detective.caso.paisesVisitados">
+           -> {{paisesYV.nombreDelPais}}
+        </div>
+        
+      </div>
+      
+      
+      
+      <div ng-show="tab.isSet(2)" class="jumbotron">
+        <center><h2>Orden de arresto: {{juego.ordenDeArresto.nombre}}</h2></center>
+        <div>
+          <div class="list-group"  style="width: 45%; margin: 0 auto">
+          <div ng-repeat="villano in juego.detective.expedientes">
+            <a href ng-click="juego.setOrdenSinEmitir(villano)" ng-class="{ active: juego.isSetOrdenSinEmitir(villano)}" class="list-group-item">{{villano.nombre}}</a>
+          </div>
+        </div>
+        <br>
+        <center><button type="button" class="btn btn-default" ng-click="juego.setOrdenDeArresto(juego.getOrdenSinEmitir())">Generar orden para {{juego.getOrdenSinEmitir().nombre}}</button></center>
+        
           
         </div>
-        <div ng-show="tab.isSet(3)" class="jumbotron">
-          <center><h2>Pistas</h2></center>
-         
+        
+        <div class="jumbotron">
+          <div class="col-xs-6 col-md-6">
+            <h4> Hobbies : </h4>
+            <div class="list-group">
+              <div ng-repeat="hobbie in juego.ordenSinEmitir.hobbies">
+                <a class="list-group-item">{{hobbie}}</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <h4> Señas Particulares : </h4>
+            <div class="list-group">
+              <div ng-repeat="senias in juego.ordenSinEmitir.seniasParticulares">
+                <a class="list-group-item">{{senias}}</a>
+              </div>
+            </div>
+          </div>
+          
         </div>
+        
+      </div>
+      
+      
+      
+      <div ng-show="tab.isSet(3)" class="jumbotron">
+        <center><h2>Pistas</h2></center>
+
       </div>
       
     </div>
