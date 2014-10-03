@@ -25,7 +25,7 @@
     
     this.actualizarPaises = function(){
       this.detective.caso.ciudadActual = this.siguientePais
-      this.detective.caso.paisesVisitados += this.siguientePais
+      this.detective.caso.paisesVisitados.push(this.siguientePais)
     };
     
     this.setOrdenDeArresto = function(newValue){
@@ -75,11 +75,14 @@ var arg = {
                             "La bandera consta de tres franjas dos celestes y una blanca",
                             "Es reconocida por su gran pasión por el fútbol"],
   lugaresDeInteres : [{
-    nombreDelLugar : "Biblioteca"
+    nombreDelLugar : "Biblioteca",
+    informante : ""
   },{
-    nombreDelLugar : "Club"
+    nombreDelLugar : "Club",
+    informante : ""
   },{
-    nombreDelLugar : "Embajada"
+    nombreDelLugar : "Embajada",
+    informante : ""
   }],
   conexiones : {}
 };
@@ -90,11 +93,14 @@ var china = {
                             "Es el país más poblado del mundo",
                             "La moneda oficial es el Yuan"],
   lugaresDeInteres : [{
-    nombreDelLugar : "Biblioteca"
+    nombreDelLugar : "Biblioteca",
+    informante : ""
   },{
-    nombreDelLugar : "Club"
+    nombreDelLugar : "Club",
+    informante : ""
   },{
-    nombreDelLugar : "Embajada"
+    nombreDelLugar : "Embajada",
+    informante : ""
   }], 
   conexiones : {}
 };
@@ -104,11 +110,14 @@ var nigeria ={
                             "Es el país más poblado de África",
                             "La bandera consta de tres franjas dos verdes y una blanca"],
   lugaresDeInteres : [{
-    nombreDelLugar : "Biblioteca"
+    nombreDelLugar : "Biblioteca",
+    informante : ""
   },{
-    nombreDelLugar : "Club"
+    nombreDelLugar : "Club",
+    informante : ""
   },{
-    nombreDelLugar : "Embajada"
+    nombreDelLugar : "Embajada",
+    informante : ""
   }], 
   conexiones : {}
 };
@@ -118,11 +127,14 @@ var brasil = {
                             "La moneda oficial es el real",
                             "Al norte del país se encuentra la cuenca amazónica"],
   lugaresDeInteres : [{
-    nombreDelLugar : "Biblioteca"
+    nombreDelLugar : "Biblioteca",
+    informante : ""
   },{
-    nombreDelLugar : "Club"
+    nombreDelLugar : "Club",
+    informante : ""
   },{
-    nombreDelLugar : "Embajada"
+    nombreDelLugar : "Embajada",
+    informante : ""
   }], 
   conexiones : {}
 };
@@ -132,11 +144,14 @@ var mex= {
                             "Introdujo el chocolate, el chile y el maíz al resto del mundo ",
                             "Es el mayor productor de plata en el mundo"],
   lugaresDeInteres : [{
-    nombreDelLugar : "Biblioteca"
+    nombreDelLugar : "Biblioteca",
+    informante : ""
   },{
-    nombreDelLugar : "Club"
+    nombreDelLugar : "Club",
+    informante : ""
   },{
-    nombreDelLugar : "Embajada"
+    nombreDelLugar : "Embajada",
+    informante : ""
   }], 
   conexiones : {}
 };
@@ -147,11 +162,14 @@ var eu= {
                             "Moneda oficial el Dolar",
                             "La bandera tiene 50 estrellas"],
   lugaresDeInteres : [{
-    nombreDelLugar : "Biblioteca"
+    nombreDelLugar : "Biblioteca",
+    informante : ""
   },{
-    nombreDelLugar : "Club"
+    nombreDelLugar : "Club",
+    informante : ""
   },{
-    nombreDelLugar : "Embajada"
+    nombreDelLugar : "Embajada",
+    informante : ""
   }], 
   conexiones : {}
 };
@@ -161,11 +179,14 @@ var espana= {
                             "La bandera tiene 2 franjas rojas, una amarilla y un escudo",
                             "Capital Madrid"],
   lugaresDeInteres : [{
-    nombreDelLugar : "Biblioteca"
+    nombreDelLugar : "Biblioteca",
+    informante : ""
   },{
-    nombreDelLugar : "Club"
+    nombreDelLugar : "Club",
+    informante : ""
   },{
-    nombreDelLugar : "Embajada"
+    nombreDelLugar : "Embajada",
+    informante : ""
   }], 
   conexiones : {}
 };
@@ -174,11 +195,14 @@ var italia= {
   caracteristicasDelPais : ["Capital Roma","Moneda oficial es el Euro",
                             "La bandera tiene 3 colores verde, blanco y rojo"],
   lugaresDeInteres : [{
-    nombreDelLugar : "Biblioteca"
+    nombreDelLugar : "Biblioteca",
+    informante : ""
   },{
-    nombreDelLugar : "Club"
+    nombreDelLugar : "Club",
+    informante : ""
   },{
-    nombreDelLugar : "Embajada"
+    nombreDelLugar : "Embajada",
+    informante : ""
   }], 
   conexiones : {}
 };
@@ -188,11 +212,14 @@ var alemania= {
                             "La bandera tiene 3 colores negro, rojo y amarillo",
                             "Capital Berling"],
   lugaresDeInteres : [{
-    nombreDelLugar : "Biblioteca"
+    nombreDelLugar : "Biblioteca",
+    informante : ""
   },{
-    nombreDelLugar : "Club"
+    nombreDelLugar : "Club",
+    informante : ""
   },{
-    nombreDelLugar : "Embajada"
+    nombreDelLugar : "Embajada",
+    informante : ""
   }], 
   conexiones : {}
 };

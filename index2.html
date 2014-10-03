@@ -51,7 +51,7 @@
         
         <h5>Paises ya Visitados: </h5>
         <div ng-repeat="paisesYV in juego.detective.caso.paisesVisitados">
-           -> {{paisesYV.nombreDelPais}}
+           <em class="pull-left">{{paisesYV.nombreDelPais}} -->  </em>
         </div>
         
       </div>
@@ -91,6 +91,7 @@
           </div>
           
         </div>
+        <div class="jumbotron"></div>
         
       </div>
       
@@ -98,7 +99,15 @@
       
       <div ng-show="tab.isSet(3)" class="jumbotron">
         <center><h2>Pistas</h2></center>
-
+        <center><div class="row">
+          <div class="col-xs-6 col-md-4" ng-repeat="lugar in juego.detective.caso.ciudadActual.lugaresDeInteres">
+            <div class="thumbnail">
+              <a href ng-click="" class="thumbnail"><img src="images/library"></a>
+              <h4>{{lugar.nombreDelLugar}}</h4> <hr>
+              <p>{{lugar.informante}}</p>
+            </div>
+          </div>
+        </div></center>
       </div>
       
     </div>
