@@ -104,7 +104,9 @@
             <div class="thumbnail">
               <a href ng-click="" class="thumbnail"><img src="images/library"></a>
               <h4>{{lugar.nombreDelLugar}}</h4> <hr>
-              <p>{{lugar.informante}}</p>
+              <div ng-repeat="info in lugar.informante">
+                {{info}}                
+              </div>
             </div>
           </div>
         </div></center>

@@ -76,13 +76,13 @@ var arg = {
                             "Es reconocida por su gran pasión por el fútbol"],
   lugaresDeInteres : [{
     nombreDelLugar : "Biblioteca",
-    informante : ""
+    informante : ["La moneda oficial es Naira","Flaco"]
   },{
     nombreDelLugar : "Club",
-    informante : ""
+    informante : ["Flaco","Alto"]
   },{
     nombreDelLugar : "Embajada",
-    informante : ""
+    informante : ["La moneda oficial es Naira","La bandera consta de tres franjas dos verdes y una blanca"]
   }],
   conexiones : {}
 };
@@ -94,13 +94,13 @@ var china = {
                             "La moneda oficial es el Yuan"],
   lugaresDeInteres : [{
     nombreDelLugar : "Biblioteca",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   },{
     nombreDelLugar : "Club",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   },{
     nombreDelLugar : "Embajada",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   }], 
   conexiones : {}
 };
@@ -111,13 +111,13 @@ var nigeria ={
                             "La bandera consta de tres franjas dos verdes y una blanca"],
   lugaresDeInteres : [{
     nombreDelLugar : "Biblioteca",
-    informante : ""
+    informante : ["La bandera tiene 3 colores verde, blanco y rojo","Flaco"]
   },{
     nombreDelLugar : "Club",
-    informante : ""
+    informante : ["Flaco","Alto"]
   },{
     nombreDelLugar : "Embajada",
-    informante : ""
+    informante : ["La bandera tiene 3 colores verde, blanco y rojo","Es el mayor productor de plata en el mundo"]
   }], 
   conexiones : {}
 };
@@ -128,13 +128,13 @@ var brasil = {
                             "Al norte del país se encuentra la cuenca amazónica"],
   lugaresDeInteres : [{
     nombreDelLugar : "Biblioteca",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   },{
     nombreDelLugar : "Club",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   },{
     nombreDelLugar : "Embajada",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   }], 
   conexiones : {}
 };
@@ -145,13 +145,13 @@ var mex= {
                             "Es el mayor productor de plata en el mundo"],
   lugaresDeInteres : [{
     nombreDelLugar : "Biblioteca",
-    informante : ""
+    informante : ["Capital Madrid","Alto"]
   },{
     nombreDelLugar : "Club",
-    informante : ""
+    informante : ["Flaco","Alto"]
   },{
     nombreDelLugar : "Embajada",
-    informante : ""
+    informante : ["La bandera tiene 2 franjas rojas, una amarilla y un escudo","Capital Madrid"]
   }], 
   conexiones : {}
 };
@@ -163,13 +163,13 @@ var eu= {
                             "La bandera tiene 50 estrellas"],
   lugaresDeInteres : [{
     nombreDelLugar : "Biblioteca",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   },{
     nombreDelLugar : "Club",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   },{
     nombreDelLugar : "Embajada",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   }], 
   conexiones : {}
 };
@@ -180,13 +180,13 @@ var espana= {
                             "Capital Madrid"],
   lugaresDeInteres : [{
     nombreDelLugar : "Biblioteca",
-    informante : ""
+    informante : ["La moneda oficial es el Euro", "Flaco"]
   },{
     nombreDelLugar : "Club",
-    informante : ""
+    informante : ["Flaco","Alto"]
   },{
     nombreDelLugar : "Embajada",
-    informante : ""
+    informante : ["La moneda oficial es el Euro", "La bandera tiene 3 colores negro, rojo y amarillo"]
   }], 
   conexiones : {}
 };
@@ -196,13 +196,13 @@ var italia= {
                             "La bandera tiene 3 colores verde, blanco y rojo"],
   lugaresDeInteres : [{
     nombreDelLugar : "Biblioteca",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   },{
     nombreDelLugar : "Club",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   },{
     nombreDelLugar : "Embajada",
-    informante : ""
+    informante : ["Lo siento, creo que se ha equivocado de Ciudad, no hay nadie con esas características"]
   }], 
   conexiones : {}
 };
@@ -213,13 +213,13 @@ var alemania= {
                             "Capital Berling"],
   lugaresDeInteres : [{
     nombreDelLugar : "Biblioteca",
-    informante : ""
+    informante : ["CUIDADO DETECTIVE!!!!"]
   },{
     nombreDelLugar : "Club",
-    informante : ""
+    informante : ["CUIDADO DETECTIVE!!!!"]
   },{
     nombreDelLugar : "Embajada",
-    informante : ""
+    informante : ["Alto Detengase!!!"]
   }], 
   conexiones : {}
 };
