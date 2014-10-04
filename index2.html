@@ -101,12 +101,17 @@
         <center><h2>Pistas</h2></center>
         <center><div class="row">
           <div class="col-xs-6 col-md-4" ng-repeat="lugar in juego.detective.caso.ciudadActual.lugaresDeInteres">
-            <div class="thumbnail">
-              <a href ng-click="" class="thumbnail"><img src="images/library"></a>
+            <div class="thumbnail" ng-controller= "TabController as tab">
+              <a href ng-click="tab.setTab(2)" class="thumbnail"><img src="images/library"></a>
               <h4>{{lugar.nombreDelLugar}}</h4> <hr>
-              <div ng-repeat="info in lugar.informante">
-                {{info}}                
+              <div ng-show="tab.isSet(2)">
+                <div ng-repeat="info in lugar.informante">
+                  {{info}}
+                </div>
+                <center><button type="button" class="btn btn-default" ng-hide="lugar.informante[0] != 'Alto Detengase!!!'" ng-click="juego.fin()">Finalizar Partida</button></center>
               </div>
+              
+              
             </div>
           </div>
         </div></center>

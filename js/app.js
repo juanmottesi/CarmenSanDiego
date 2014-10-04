@@ -51,6 +51,15 @@
     this.isSetOrdenSinEmitir = function(newValue){
       return this.ordenSinEmitir === newValue;
     };
+    
+    this.fin = function(){
+      if(this.ordenDeArresto === this.detective.caso.villano){
+        alert("Ganaste!!!");
+      }
+      else{
+        alert("Perdiste T_T");
+      }
+    };
         
   });
 
