@@ -102,7 +102,7 @@
         <center><div class="row">
           <div class="col-xs-6 col-md-4" ng-repeat="lugar in juego.detective.caso.ciudadActual.lugaresDeInteres">
             <div class="thumbnail" ng-controller= "TabController as tab">
-              <a href ng-click="tab.setTab(2)" class="thumbnail"><img src="images/library"></a>
+              <a href ng-click="tab.setTab(2)" class="thumbnail"><img src={{lugar.images[0]}} height="168" width="145"></a>
               <h4>{{lugar.nombreDelLugar}}</h4> <hr>
               <div ng-show="tab.isSet(2)">
                 <div ng-repeat="info in lugar.informante">
