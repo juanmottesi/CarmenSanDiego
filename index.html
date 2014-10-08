@@ -36,6 +36,7 @@
       <!-- Fin del nav bar -->
       <!-- Inicio del Cuerpo -->
       
+      <!-- Inicio del Informacion -->
       <div ng-show="tab.isSet(1)" class="jumbotron">
         <center><h2>Pais Actual: {{juego.paisActual()}}</h2></center>
         <!-- Inicio de lugares a donde ir -->
@@ -55,9 +56,9 @@
         </div>
         
       </div>
+      <!-- Fin de la informacion -->
       
-      
-      
+      <!-- Inicio de la orden de arresto -->
       <div ng-show="tab.isSet(2)" class="jumbotron">
         <center><h2>Orden de arresto: {{juego.ordenDeArresto.nombre}}</h2></center>
         <div>
@@ -94,9 +95,9 @@
         <div class="jumbotron"></div>
         
       </div>
+      <!-- Fin de Orden de arresto -->
       
-      
-      
+      <!-- Inicio de Pistas -->
       <div ng-show="tab.isSet(3)" class="jumbotron">
         <center><h2>Pistas</h2></center>
         <center><div class="row">
@@ -118,6 +119,7 @@
       </div>
       
     </div>
+    <!-- Fin de Pistas -->
     
     <!-- Fin del Cuerpo -->
     

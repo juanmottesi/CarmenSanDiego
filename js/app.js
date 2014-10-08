@@ -25,7 +25,9 @@
     
     this.actualizarPaises = function(){
       this.detective.caso.ciudadActual = this.siguientePais
-      this.detective.caso.paisesVisitados.push(this.siguientePais)
+      if(this.detective.caso.paisesVisitados.indexOf(this.siguientePais) == -1){
+        this.detective.caso.paisesVisitados.push(this.siguientePais)
+      }
     };
     
     this.setOrdenDeArresto = function(newValue){
