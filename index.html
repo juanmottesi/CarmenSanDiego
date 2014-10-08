@@ -109,7 +109,15 @@
                 <div ng-repeat="info in lugar.informante">
                   {{info}}
                 </div>
-                <center><button type="button" class="btn btn-default" ng-hide="lugar.informante[0] != 'Alto Detengase!!!'" ng-click="juego.fin()">Finalizar Partida</button></center>
+                <!--<center><button type="button" class="btn btn-default" ng-hide="lugar.informante[0] != 'Alto Detengase!!!'" ng-click="juego.fin()">Finalizar Partida</button></center> -->
+                  <div ng-controller="ModalController as modal">
+                  <button ng-click="toggleModal()" class="btn btn-default" ng-hide="lugar.informante[0] != 'Alto Detengase!!!'">Finalizar Partida</button>
+    
+                  <modal title="Resultado" visible="showModal">
+                    <h2>{{juego.fin()}}</h2>
+                  </modal>
+                </div>
+                
               </div>
               
               
